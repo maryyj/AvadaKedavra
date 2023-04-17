@@ -1,0 +1,93 @@
+#gameOver{
+  background-image: url("../images/avadakedavra.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.playAgainBtn{
+  font-family: 'Creepster', cursive;
+  background-color: #2fff4b;
+  font-size: 5vw;
+  border-radius: 20px;
+  border-width: 3px;
+  display: block;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+body {
+  font-family: 'Creepster', cursive;
+  margin: auto;
+  background-color: black;
+}
+
+#score {
+  color: #2fff4b;
+  font-size: 15vh;
+  font-weight: bolder;
+  text-align: center;
+}
+#gameBoard {
+  width: 20vw;
+  height: 20vh;
+  margin: auto;
+  border-collapse: separate;
+  margin-bottom: 20px;
+}
+
+#gameBoard td,
+#gameBoard tr {
+  background-color: #2fff4b;
+  font-size: 20px;
+  text-align: center;
+  border-width: 3px;
+
+}
+
+#gameBoard td {
+  width: 15px;
+  height: 15px;
+}
+
+button {
+  font-family: 'Creepster', cursive;
+  background-color: #2fff4b;
+  border-radius: 20px;
+  border: none;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: box-shadow 0.15s;
+}
+
+.buttonContainer {
+  margin: 5px;
+  display: grid;
+  grid-template-areas:
+      '. up .'
+      'left . right'
+      '. down .';
+  grid-gap: 5px;
+}
+
+#upButton {
+  grid-area: up;
+}
+
+#downButton {
+  grid-area: down;
+}
+
+#leftButton {
+  grid-area: left;
+}
+
+#rightButton {
+  grid-area: right;
+}
+
+button:hover {
+  box-shadow: 5px 5px 10px red;
+}
