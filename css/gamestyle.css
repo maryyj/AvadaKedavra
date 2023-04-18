@@ -112,6 +112,7 @@ button {
 }
 
 .buttonContainer {
+  margin-top: 5px;
   margin: 10px auto;
   display: grid;
   grid-template-areas:

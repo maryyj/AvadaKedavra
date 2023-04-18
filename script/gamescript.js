@@ -1,3 +1,4 @@
+// https://maryyj.github.io/AvadaKedavra/
 let gameBoard = document.getElementById("gameBoard")
 let score = document.getElementById('score');
 const upBtn = document.getElementById('upButton');
@@ -93,7 +94,6 @@ function drawGameBoard() {
   if (map[playerMoveY][playerMoveX] === 'X') {
     map[playerMoveY][playerMoveX] = '';
     score.textContent = parseInt(score.textContent) + 10;
-    alert('Du räddade en karaktär!');
   }
 
 }
