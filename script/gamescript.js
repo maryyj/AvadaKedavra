@@ -1,4 +1,4 @@
-// https://maryyj.github.io/AvadaKedavra/
+// https://maryyj.githubnyköping.io/AvadaKedavra/
 let gameBoard = document.getElementById("gameBoard")
 let score = document.getElementById('score');
 const upBtn = document.getElementById('upButton');
