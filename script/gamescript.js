@@ -10,6 +10,7 @@ score.textContent = 0;
 const rows = 5;
 const cols = 5;
 const numCharacters = 3;
+let charactersFound = 0;
 
 const backgroundImages = [
   'url(./images/diagonalley.png)',
@@ -90,13 +91,22 @@ function drawGameBoard() {
     }
     gameBoard.appendChild(row);
   }
-
+  
   if (map[playerMoveY][playerMoveX] === 'X') {
     map[playerMoveY][playerMoveX] = '';
     score.textContent = parseInt(score.textContent) + 10;
+    alert('Du räddade en vän!');
+    charactersFound++;
+  }
+  if (charactersFound === numCharacters) {
+    alert('Bra jobbat, du hittade alla dina vänner!');
+    window.location.href = 'playerwon.html';
+    console.log(charactersFound)
   }
 
 }
+
+
 
 function displayInstruction() {
   let text = document.getElementById('instructions')
@@ -176,7 +186,7 @@ function moveVoldemort() {
 
 function checkForVoldemort() {
   if (playerMoveX === voldemortMoveX && playerMoveY === voldemortMoveY) {
-   
+
     window.location.href = 'gameover.html';
   }
 }
@@ -186,8 +196,8 @@ function getRandomIndex() {
 }
 
 function createCharacters() {
-  
-  let charactersFound = 0;
+
+ 
 
   for (let i = 0; i < numCharacters; i++) {
     let row = getRandomIndex();
@@ -208,15 +218,6 @@ function createCharacters() {
     const text = document.createTextNode('X');
     cell.appendChild(text);
 
-    if (row === playerMoveY && col === playerMoveX && map[row][col] === 'X') {
-      score.textContent = parseInt(score.textContent) + 10;
-      alert('Du räddade en vän!');
-      charactersFound++;
-    }
 
-    if (charactersFound == numCharacters) {
-      alert('Bra joobat, du hittade alla dina vänner!');
-      window.location.href = 'playerwon.html';
-    }
   }
 }
