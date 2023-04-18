@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Voldemort hunt</title>
 
@@ -9,14 +10,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
-  <header id="header"> 
-    <div class="scoreContainer">
+  <header id="header">
+    <div class="headerContainer">
       <span id="score">Poäng: 0</span>
+      <p id="instructions"></p>
     </div>
   </header>
   <main>
-    <div id="background"></div>
+    <div id="bgContainer">
+      <img id="backgroundImg">
+    </div>
     <table id="gameBoard">
       <tr>
         <td></td>
@@ -29,8 +34,11 @@
     <button id="downButton">Ner</button>
     <button id="leftButton">Vänster</button>
   </div>
-  
+  <div>
+
+  </div>
   <script src="script/gamescript.js"></script>
   <!-- <script src="script/weatherscript.js"></script> -->
 </body>
+
 </html>

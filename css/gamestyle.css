@@ -3,6 +3,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+#playerWon{
+  background-image: url("../images/harrywin.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .playAgainBtn{
   font-family: 'Creepster', cursive;
   background-color: #2fff4b;
@@ -21,16 +26,48 @@ body {
   margin: auto;
   background-color: black;
 }
-
+.headerContainer{
+  display: grid;
+  grid-template-areas:
+  'left . center . right'
+}
 #score {
   color: #2fff4b;
   font-size: 15vh;
   font-weight: bolder;
   text-align: center;
+  display: inline-block;
+  grid-area: left;
+}
+#instructions{
+  color: red;
+  margin-top: 50px;
+  text-align: center;
+  font-size: xx-large;
+  display: inline-block;
+  grid-area: center;
+}
+#bgContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-bottom: 5px;
+}
+#backgroundImg{
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -1;
 }
 #gameBoard {
-  width: 20vw;
-  height: 20vh;
+  width: 25vw;
+  height: 25vh;
   margin: auto;
   border-collapse: separate;
   margin-bottom: 20px;
@@ -42,7 +79,7 @@ body {
   font-size: 20px;
   text-align: center;
   border-width: 3px;
-
+  
 }
 
 #gameBoard td {
@@ -66,9 +103,9 @@ button {
   margin: 5px;
   display: grid;
   grid-template-areas:
-      '. up .'
-      'left . right'
-      '. down .';
+  '. up .'
+  'left . right'
+  '. down .';
   grid-gap: 5px;
 }
 
@@ -91,3 +128,4 @@ button {
 button:hover {
   box-shadow: 5px 5px 10px red;
 }
+
