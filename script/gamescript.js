@@ -11,7 +11,6 @@ const cols = 5;
 const numCharacters = 3;
 
 const backgroundImages = [
-  'url(../images/hogwarts.jpg)',
   'url(../images/diagonalley.png)',
   'url(../images/platform.jpg)',
   'url(../images/bridge.jpg)',
@@ -90,12 +89,12 @@ function drawGameBoard() {
     }
     gameBoard.appendChild(row);
   }
+
   if (map[playerMoveY][playerMoveX] === 'X') {
     map[playerMoveY][playerMoveX] = '';
     score.textContent = parseInt(score.textContent) + 10;
     alert('Du räddade en karaktär!');
   }
-
 
 }
 
@@ -104,7 +103,7 @@ function displayInstruction() {
   text.innerHTML = "Använda knapparna för att hitta dina vänner( X )..."
 }
 
-function createImages() {
+function createBgImages() {
   const bgImage = document.getElementById('backgroundImg');
   bgImageIndex = (bgImageIndex + 1) % backgroundImages.length;
   bgImage.style.backgroundImage = backgroundImages[bgImageIndex];
@@ -118,7 +117,7 @@ function moveUp() {
     btnPressCount++
     moveVoldemort()
     checkForVoldemort()
-    createImages()
+    createBgImages()
     drawGameBoard()
   }
 }
@@ -130,7 +129,7 @@ function moveRight() {
     btnPressCount++
     moveVoldemort()
     checkForVoldemort()
-    createImages()
+    createBgImages()
     drawGameBoard()
   }
 }
@@ -142,7 +141,7 @@ function moveDown() {
     btnPressCount++
     moveVoldemort()
     checkForVoldemort()
-    createImages()
+    createBgImages()
     drawGameBoard()
   }
 }
@@ -153,7 +152,7 @@ function moveLeft() {
     btnPressCount++
     moveVoldemort()
     checkForVoldemort()
-    createImages()
+    createBgImages()
     drawGameBoard()
   }
 }
@@ -215,7 +214,7 @@ function createCharacters() {
       charactersFound++;
     }
 
-    if (charactersFound === numCharacters) {
+    if (charactersFound == numCharacters) {
       alert('Bra joobat, du hittade alla dina vänner!');
       window.location.href = 'playerwon.html';
     }

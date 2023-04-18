@@ -19,24 +19,23 @@
     </div>
   </header>
   <main>
-    <div id="bgContainer">
-      <img id="backgroundImg">
+    <div class="grid">
+      <div id="bgContainer">
+        <img id="backgroundImg">
+      </div>
+      <table id="gameBoard">
+        <tr>
+          <td></td>
+        </tr>
+      </table>
     </div>
-    <table id="gameBoard">
-      <tr>
-        <td></td>
-      </tr>
-    </table>
+    <div class="buttonContainer">
+      <button id="upButton">Upp</button>
+      <button id="rightButton">Höger</button>
+      <button id="downButton">Ner</button>
+      <button id="leftButton">Vänster</button>
+    </div>
   </main>
-  <div class="buttonContainer">
-    <button id="upButton">Upp</button>
-    <button id="rightButton">Höger</button>
-    <button id="downButton">Ner</button>
-    <button id="leftButton">Vänster</button>
-  </div>
-  <div>
-
-  </div>
   <script src="script/gamescript.js"></script>
   <!-- <script src="script/weatherscript.js"></script> -->
 </body>

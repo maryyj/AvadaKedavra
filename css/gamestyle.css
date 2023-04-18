@@ -23,7 +23,8 @@
 }
 body {
   font-family: 'Creepster', cursive;
-  margin: auto;
+  margin:0;
+  padding: 0;
   background-color: black;
 }
 .headerContainer{
@@ -42,35 +43,48 @@ body {
 #instructions{
   color: red;
   margin-top: 50px;
+  margin: 10px 0;
   text-align: center;
   font-size: xx-large;
   display: inline-block;
   grid-area: center;
 }
+.grid{
+  display: grid;
+  grid-template-columns: '.1fr.' ;
+  grid-template-rows: 1fr 1fr;
+  margin-top:0;
+  margin-bottom: 0;
+}
 #bgContainer{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin-bottom: 5px;
+  height: calc(100vh - 300px); 
+  margin: 0;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
 }
 #backgroundImg{
+  
   background-repeat: no-repeat;
   background-size: cover;
-  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
   z-index: -1;
+  height: 100%;
+  width: 100%;
 }
 #gameBoard {
   width: 25vw;
   height: 25vh;
-  margin: auto;
+  margin: 5px auto;
   border-collapse: separate;
-  margin-bottom: 20px;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
 }
 
 #gameBoard td,
@@ -79,9 +93,7 @@ body {
   font-size: 20px;
   text-align: center;
   border-width: 3px;
-  
 }
-
 #gameBoard td {
   width: 15px;
   height: 15px;
@@ -100,7 +112,7 @@ button {
 }
 
 .buttonContainer {
-  margin: 5px;
+  margin: 10px auto;
   display: grid;
   grid-template-areas:
   '. up .'
