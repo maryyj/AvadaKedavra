@@ -49,6 +49,7 @@ body {
   display: inline-block;
   grid-area: center;
 }
+
 .grid{
   display: grid;
   grid-template-columns: '.1fr.' ;
@@ -60,13 +61,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 300px); 
+  height: calc(100vh - 350px); 
   margin: 0;
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
 }
 #backgroundImg{
-  
   background-repeat: no-repeat;
   background-size: cover;
   top: 0;
@@ -140,4 +140,3 @@ button {
 button:hover {
   box-shadow: 5px 5px 10px red;
 }
-

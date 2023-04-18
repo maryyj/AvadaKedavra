@@ -11,14 +11,14 @@ const cols = 5;
 const numCharacters = 3;
 
 const backgroundImages = [
-  'url(../images/diagonalley.png)',
-  'url(../images/platform.jpg)',
-  'url(../images/bridge.jpg)',
-  'url(../images/godricshollow.gif)',
-  'url(../images/christmas.gif)',
-  'url(../images/snowybg.gif)',
-  'url(../images/platformnine.gif)',
-  'url(../images/soldier.jpg)'];
+  'url(./images/diagonalley.png)',
+  'url(./images/platform.jpg)',
+  'url(./images/bridge.jpg)',
+  'url(./images/godricshollow.gif)',
+  'url(./images/christmas.gif)',
+  'url(./images/snowybg.gif)',
+  'url(./images/platformnine.gif)',
+  'url(./images/soldier.jpg)'];
 
 const characterImages = [
   '../images/dobby.jpg',
